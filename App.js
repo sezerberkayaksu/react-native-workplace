@@ -1,13 +1,7 @@
-import React, {useEffect, useRef} from 'react';
-import {
-  NativeBaseProvider,
-  Text,
-  extendTheme,
-  useColorModeValue,
-  useColorMode,
-  View,
-} from 'native-base';
-import {Animated, Dimensions, PanResponder, useColorScheme} from 'react-native';
+import React, {useRef} from 'react';
+import {NativeBaseProvider, Text, extendTheme} from 'native-base';
+import {Animated, Dimensions, PanResponder} from 'react-native';
+import BoxMonster from './components/BoxMonster';
 
 const App = () => {
   /*const nativeColorScheme = useColorScheme();
@@ -47,9 +41,9 @@ const App = () => {
           transform: [{translateX: pan.x}, {translateY: pan.y}],
         }}
         {...panResponder.panHandlers}>
-        <View style={styles.box} />
+        <BoxMonster />
         <Text fontSize="sm" variant="bold" style={styles.text}>
-          Box
+          Box Monster
         </Text>
       </Animated.View>
     </NativeBaseProvider>
@@ -81,11 +75,6 @@ const styles = {
     width: 150,
     height: 50,
     textAlign: 'center',
-  },
-  box: {
-    width: 150,
-    height: 150,
-    backgroundColor: 'aqua',
   },
 };
 
